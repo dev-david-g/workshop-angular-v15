@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pancakes';
+  content: {title: string} = {title: 'pancakes'};
+
+  constructor() {
+  }
+
+  public doPancake() {
+    (this.content as any).cook()
+      .then((response: any)=> {
+      console.log(response);
+    })
+  }
+
 }
