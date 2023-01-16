@@ -12,10 +12,6 @@ export class AppComponent {
   }
 
   public doPancake() {
-    (this.content as any).cook()
-      .then((response: any)=> {
-      console.log(response);
-    })
+    alert('cook');
   }
-
 }
