@@ -5,8 +5,7 @@ import {PancakeReceiptListComponent} from './pancake-receipt-list/pancake-receip
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'list'},
   {path: 'list', component: PancakeReceiptListComponent},
-  {path: 'list/:id', loadComponent: () => import('./pancake-receipt-details/pancake-receipt-details.component')
-      .then(m => m.PancakeReceiptDetailsComponent)}
+  {path: 'list/:id', loadComponent: () => import('./pancake-receipt-details/pancake-receipt-details.component')}
 ]
 
 @NgModule({

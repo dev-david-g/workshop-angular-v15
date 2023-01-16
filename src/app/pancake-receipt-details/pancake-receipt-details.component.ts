@@ -9,7 +9,7 @@ import {ActivatedRoute} from "@angular/router";
   templateUrl: './pancake-receipt-details.component.html',
   styleUrls: ['./pancake-receipt-details.component.css']
 })
-export class PancakeReceiptDetailsComponent implements OnInit {
+export default class PancakeReceiptDetailsComponent implements OnInit {
   public id = '';
 
   constructor(private readonly activatedRoute: ActivatedRoute) {
