@@ -2,6 +2,7 @@ import {bootstrapApplication} from '@angular/platform-browser';
 import {PancakeReceiptsAppComponent} from './app/pancake-receipts-app/pancake-receipts-app.component';
 import {provideRouter, Routes} from "@angular/router";
 import {PancakeReceiptListComponent} from "./app/pancake-receipt-list/pancake-receipt-list.component";
+import {DATE_PIPE_DEFAULT_OPTIONS} from "@angular/common";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'list'},
@@ -13,7 +14,8 @@ const routes: Routes = [
 // platformBrowserDynamic().bootstrapModule(AppModule)
 //   .catch(err => console.error(err));
 
-bootstrapApplication(PancakeReceiptsAppComponent,{
-  providers: [provideRouter(routes)]
+bootstrapApplication(PancakeReceiptsAppComponent, {
+  providers: [provideRouter(routes),
+    {provide: DATE_PIPE_DEFAULT_OPTIONS, useValue: {dateFormat: 'shortDate'}}]
 })
   .catch(err => console.error(err));

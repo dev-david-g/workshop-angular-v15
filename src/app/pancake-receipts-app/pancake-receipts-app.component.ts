@@ -11,5 +11,5 @@ import {RouterOutlet} from '@angular/router';
   styleUrls: ['./pancake-receipts-app.component.css']
 })
 export class PancakeReceiptsAppComponent {
-
+  public today = Date.now();
 }
